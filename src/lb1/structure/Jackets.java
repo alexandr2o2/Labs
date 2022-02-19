@@ -1,10 +1,18 @@
-package lb1;
+package lb1.structure;
+
+import java.util.ArrayList;
 
 public class Jackets extends Clothes{
 
   private final String doc = "Класс Jackets";
   private int Number_of_pockets;
-  private boolean Watch_pocket;  public Jackets () { };
+  private boolean Watch_pocket;
+
+  public Jackets (ArrayList<String> newVar1, float newVar2, float newVar3, int newVar4, boolean newVar5) {
+    super(newVar1, newVar2, newVar3);
+    Number_of_pockets = newVar4;
+    Watch_pocket = newVar5;
+  };
 
   public void setNumber_of_pockets (int newVar) {
     Number_of_pockets = newVar;

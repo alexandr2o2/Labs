@@ -1,4 +1,4 @@
-package lb1;
+package lb1.structure;
 
 import java.util.ArrayList;
 
@@ -7,6 +7,12 @@ public class Clothes {
   private ArrayList<String> materials = new ArrayList<>();
   private float weight;
   private float size;
+
+  public Clothes(ArrayList<String> newVar1, float newVar2, float newVar3){
+    materials = newVar1;
+    weight = newVar2;
+    size = newVar3;
+  }
 
   public void setMaterials (ArrayList<String> newVar) {
         materials = newVar;
