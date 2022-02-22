@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Shorts extends Pants {
 
-  private final String doc = "Класс Trousers";
+  private final String doc = "Класс Shorts";
 
   public Shorts(ArrayList<String> newVar1, float newVar2, float newVar3) {
     super(newVar1, newVar2, newVar3);

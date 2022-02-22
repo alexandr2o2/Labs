@@ -14,24 +14,24 @@ public class Clothes {
     size = newVar3;
   }
 
-  public void setMaterials (ArrayList<String> newVar) {
-        materials = newVar;
+  public void setMaterials (ArrayList<String> materials) {
+        this.materials = materials;
   }
 
   public ArrayList<String> getMaterials () {
     return materials;
   }
 
-  public void setWeight (float newVar) {
-    weight = newVar;
+  public void setWeight (float weight) {
+    this.weight = weight;
   }
 
   public float getWeight () {
     return weight;
   }
 
-  public void setSize (float newVar) {
-    size = newVar;
+  public void setSize (float size) {
+    this.size = size;
   }
 
   public float getSize () {
