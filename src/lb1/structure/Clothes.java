@@ -1,8 +1,10 @@
 package lb1.structure;
 
+import lb3.ClothesIF;
+
 import java.util.ArrayList;
 
-public class Clothes {
+public class Clothes implements ClothesIF {
   final private String doc =" Класс Clothers";
   private ArrayList<String> materials = new ArrayList<>();
   private float weight;

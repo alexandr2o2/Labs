@@ -5,17 +5,14 @@ import lb1.structure.Clothes;
 import java.util.ArrayList;
 
 public class Ironing extends ServicesDecorator {
-    Clothes clothes;
+    ClothesIF clothes;
 
-    public Ironing(ArrayList<String> newVar1, float newVar2, float newVar3) {
-        super(newVar1, newVar2, newVar3);
-    }
-    public Ironing(Clothes clothes){
+    public Ironing(ClothesIF clothes){
         this.clothes = clothes;
     }
 
     @Override
     public String getDescription() {
-        return null;
+        return  clothes.getDescription() + " Отглажено";
     }
 }
