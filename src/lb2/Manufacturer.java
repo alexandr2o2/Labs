@@ -5,15 +5,6 @@ class Manufacturer implements Runnable{
 
     private int output = 5;
     private Storage storage;
-    private boolean flag = false;
-
-    synchronized void stop(){
-        flag = false;
-    }
-    synchronized void proceed(){
-        flag = true;
-        notify();
-    }
 
     public void addStorage(Storage storage){
         this.storage = storage;
@@ -27,17 +18,18 @@ class Manufacturer implements Runnable{
             }
             else {
                 System.out.println("Произведен товар. Cклад полн!!");
-                flag = true;
+                while (true){
+                    storage.setFlag(true);
+                    if (storage.getNumOfProduct() < storage.getCapacity()/2) {
+                        break;
+                    }
+                }
             }
             try {
-                while (flag){
-                    wait();
-                }
-                Thread.sleep(100);
+                Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 }
-

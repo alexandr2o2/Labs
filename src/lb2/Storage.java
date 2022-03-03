@@ -5,20 +5,23 @@ import java.util.List;
 
 public class Storage {
 
-    public void addMembersM(Manufacturer manufacturer) {
-        this.membersM = manufacturer;
-    }
-    public void addMembersC(Consumer consumer) {
-        this.membersC = consumer;
+    private int numOfProduct;
+    private int capacity = 1000;
+
+    public boolean isFlag() {
+        return flag;
     }
 
-    private Consumer membersC;
-    private Manufacturer membersM;
+    public void setFlag(boolean flag) {
+        this.flag = flag;
+    }
 
+    boolean flag = false;
 
     Storage(int numOfProduct){
         this.numOfProduct = numOfProduct;
     }
+
     public synchronized int getNumOfProduct() {
         return numOfProduct;
     }
@@ -27,32 +30,50 @@ public class Storage {
         this.numOfProduct = numOfProduct;
     }
 
-    private volatile int numOfProduct;
-    private int capacity = 1000;
-
+    public int getCapacity() {
+        return capacity;
+    }
 
     public synchronized boolean addNumOfProduct(int numOfProduct){
+
+        while (flag){
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         if (this.numOfProduct < capacity - numOfProduct){
             this.numOfProduct = this.numOfProduct + numOfProduct;
-            if (this.numOfProduct > capacity/2){
-                membersC.proceed();
-            }
+            flag = true;
+            notify();
             return true;
         }
-        else
-            membersC.stop();
+        else {
+            flag = true;
+            notify();
             return false;
+        }
     }
+
     public synchronized boolean removeNumOfProduct(int numOfProduct){
+        while (!flag){
+            try {
+                wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
         if (this.numOfProduct - numOfProduct > 0){
             this.numOfProduct = this.numOfProduct - numOfProduct;
-            if (this.numOfProduct < capacity/2){
-                membersM.proceed();
-            }
+            flag = false;
+            notify();
             return true;
         }
-        else
-            membersM.stop();
+        else {
+            flag = false;
+            notify();
             return false;
+        }
     }
 }

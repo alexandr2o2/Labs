@@ -4,15 +4,6 @@ class Consumer implements Runnable {
 
     private int input = 10;
     private Storage storage;
-    private boolean flag = false;
-
-    synchronized void stop(){
-        flag = true;
-    }
-    synchronized void proceed(){
-        flag = false;
-        notify();
-    }
 
     public void addStorage(Storage storage) {
         this.storage = storage;
@@ -25,14 +16,17 @@ class Consumer implements Runnable {
                 System.out.println("Потреблен товар. Количество товара на складе " + storage.getNumOfProduct());
             } else {
                 System.out.println("Cклад пуст!");
-                flag = true;
+
+                while (true){
+                    storage.setFlag(false);
+                    if (storage.getNumOfProduct() > storage.getCapacity()/2) {
+                        break;
+                    }
+                }
 
             }
             try {
-                while (flag){
-                    wait();
-                }
-                Thread.sleep(500);
+                Thread.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
