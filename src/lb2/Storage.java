@@ -6,7 +6,7 @@ import java.util.List;
 public class Storage {
 
     private int numOfProduct;
-    private int capacity = 1000;
+    private final int capacity = 1000;
 
     public boolean isFlag() {
         return flag;
