@@ -83,8 +83,6 @@ public class Main {
                 clothes = new Washing(clothes);
             }
             System.out.println(clothes.getDescription());
-
         }
-
     }
 }

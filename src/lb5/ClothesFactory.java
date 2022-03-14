@@ -4,8 +4,8 @@ import lb1.structure.*;
 
 import java.util.ArrayList;
 
-public class ClothesFactory {
-    public static Clothes creatClothes(int type){
+public class ClothesFactory extends Factory {
+    public  Clothes creatClothes(int type){
 
         int s1 = 10;
         int s2 = 15;
