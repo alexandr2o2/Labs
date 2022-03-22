@@ -13,6 +13,4 @@ public class French_cap extends Cap{
   public String getDescription() {
     return doc;
   }
-
-
 }

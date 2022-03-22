@@ -10,6 +10,7 @@ public class Cap extends Hats {
     super(newVar1, newVar2, newVar3);
   }
 
+
   public String  getDescription() {
     return doc;
   }
