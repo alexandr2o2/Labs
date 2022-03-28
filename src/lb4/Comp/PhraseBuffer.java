@@ -1,4 +1,4 @@
-package lb4;
+package lb4.Comp;
 
 import java.util.List;
 

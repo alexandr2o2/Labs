@@ -1,4 +1,4 @@
-package lb4;
+package lb4.Comp;
 
 public enum Type {
     Br_L,Br_R,Plus,Minus,Pr,Div,

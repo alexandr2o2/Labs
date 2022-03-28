@@ -1,5 +1,7 @@
 package lb4;
 
+import lb4.Comp.Comp;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

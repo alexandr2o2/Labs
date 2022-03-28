@@ -1,7 +1,6 @@
-package lb4;
+package lb4.Comp;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -10,7 +9,7 @@ import java.util.regex.Pattern;
 public class Phrase {
     Type type;
     String text;
-    static ArrayList<Integer> num = new ArrayList<>();
+    static ArrayList<Integer> num;
 
 
     public Phrase(Type type, String text) {
@@ -19,6 +18,7 @@ public class Phrase {
     }
 
     public static List<Phrase> separate(String text){
+        num = new ArrayList<>();
         Pattern br_L = Pattern.compile("\\(");
         Pattern br_R = Pattern.compile("\\)");
         Pattern pNumber = Pattern.compile("[0-9]+");
@@ -40,9 +40,9 @@ public class Phrase {
         while (m.find()){
             num.add(m.start());
         }
-        System.out.println(num.size());
+        //System.out.println(num.size());
         Collections.sort(num);
-        System.out.println(num);
+        //System.out.println(num);
         Phrase[] phrases = new Phrase[num.size()+1];
         m = br_L.matcher(text);
         while (m.find()){

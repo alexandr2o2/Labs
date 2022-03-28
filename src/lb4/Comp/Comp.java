@@ -1,6 +1,5 @@
-package lb4;
+package lb4.Comp;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -38,29 +37,11 @@ public class Comp {
         return answer;
     }
     public static double getAnswer2(String textLine){
-        double answer = 0;
-
-        /*------------------------------------------------------------------
-         * PARSER RULES
-                *------------------------------------------------------------------*/
-
-//    expr : plusminus* EOF ;
-//
-//    plusminus: multdiv ( ( '+' | '-' ) multdiv )* ;
-//
-//    multdiv : factor ( ( '*' | '/' ) factor )* ;
-//
-//    factor : NUMBER | '(' expr ')' ;
-
-        textLine = textLine.replaceAll("\s+","");
-        Pattern pLetters = Pattern.compile("[a-zA-Z]+");
-        String tempLine = textLine.replaceAll("([Ss]in)|([Cc]os)",
-                "");
-
-
-
-
-
+        double answer;
+        //textLine = textLine.replaceAll("\s+","");
+        List<Phrase> phrases = Phrase.separate(textLine);
+        PhraseBuffer phraseBuffer = new PhraseBuffer(phrases);
+        answer = Comp.expr(phraseBuffer);
         return answer;
     }
     public static double expr(PhraseBuffer phrases){
