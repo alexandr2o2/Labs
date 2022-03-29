@@ -10,31 +10,31 @@ class MethodsForLinesTest {
     @Test
     void getAnswer1() {
         String text = "12+14+68+98";
-        double answer = Comp.getAnswer2(text);
+        double answer = Comp.getAnswer(text);
         assertEquals(192,answer);
     }
     @Test
     void getAnswer2() {
         String text = "12+(14+68)/98";
-        double answer = Comp.getAnswer2(text);
+        double answer = Comp.getAnswer(text);
         assertEquals(12.8367347,answer);
     }
     @Test
     void getAnswer3() {
         String text = "12/14+68*98";
-        double answer = Comp.getAnswer2(text);
+        double answer = Comp.getAnswer(text);
         assertEquals(6664.857143,answer);
     }
     @Test
     void getAnswer4() {
         String text = "45*78*15-57/5";
-        double answer = Comp.getAnswer2(text);
+        double answer = Comp.getAnswer(text);
         assertEquals(52638.6,answer);
     }
     @Test
     void getAnswer5() {
         String text = "(45*78*15-57/5)*0";
-        double answer = Comp.getAnswer2(text);
+        double answer = Comp.getAnswer(text);
         assertEquals(0,answer);
     }
 //

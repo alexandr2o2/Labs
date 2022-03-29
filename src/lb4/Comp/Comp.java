@@ -1,42 +1,9 @@
 package lb4.Comp;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Comp {
-
-    public static double getAnswer1(String textLine) {
-        Pattern p = Pattern.compile("([\\+\\*-/])*([\\s\\n])*([0-9]+)([\\s\\n])*", Pattern.MULTILINE);
-        Matcher matcher = p.matcher(textLine);
-        double answer = 0;
-        while (matcher.find()) {
-            double num = Double.parseDouble(matcher.group(3));
-            System.out.println("Цифра: " + num);
-            System.out.println("Дейсвие: " + matcher.group(1));
-            String sep = matcher.group(1);
-            if (sep == null) {
-                System.out.println("Начало");
-                answer = num;
-                continue;
-            }
-            if (sep.equals("+")) {
-                System.out.println("Суммировано");
-                answer += num;
-            } else if (sep.equals("-")) {
-                System.out.println("Найдена разность");
-                answer -= num;
-            } else if (sep.equals("/")) {
-                System.out.println("Найдено отношение");
-                answer = answer / num;
-            } else if (sep.equals("*")) {
-                System.out.println("Умножено");
-                answer *= num;
-            }
-        }
-        return answer;
-    }
-    public static double getAnswer2(String textLine){
+    public static double getAnswer(String textLine){
         double answer;
         //textLine = textLine.replaceAll("\s+","");
         List<Phrase> phrases = Phrase.separate(textLine);
