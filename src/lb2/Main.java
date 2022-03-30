@@ -15,6 +15,5 @@ public class Main {
 
         manufacturerThread.start();
         consumerThread.start();
-
     }
 }
