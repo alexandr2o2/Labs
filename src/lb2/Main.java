@@ -3,7 +3,7 @@ package lb2;
 public class Main {
     static public void main(String[] args){
 
-        Storage storage = new Storage(250);
+        Storage storage = new Storage(1000);
         Consumer consumer = new Consumer();
         Manufacturer manufacturer = new Manufacturer();
 

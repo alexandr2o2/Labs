@@ -1,8 +1,5 @@
 package lb2;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Storage {
 
     private int numOfProduct;
@@ -35,7 +32,6 @@ public class Storage {
     }
 
     public synchronized boolean addNumOfProduct(int numOfProduct){
-
         while (flag){
             try {
                 wait();
