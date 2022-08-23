@@ -11,6 +11,9 @@ public class Cake {
     private CakeTypes cakeTypes;
     private double temperature;
 
+    public Cake(){
+    }
+
     public Cake(Dough dough, Filling filling, Sprinkle sprinkle, CakeTypes cakeTypes, double temperature) {
         this.dough = dough;
         this.filling = filling;

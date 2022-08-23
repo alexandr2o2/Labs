@@ -8,7 +8,37 @@ public class Recipe {
     private Dough dough;
     private Filling filling;
     private Sprinkle sprinkle;
-    private final CakeTypes cakeTypes;
+    private CakeTypes cakeTypes;
+    private double totalMass;
+    private String totalProducts;
+    private double totalCal;
+    private boolean totalGlFree;
+
+    public Recipe() {
+    }
+
+    public double getTotalMass() {
+        totalMass = filling.getMass() + sprinkle.getMass() + dough.getMass();
+        return totalMass;
+    }
+
+    public String getTotalProducts() {
+        totalProducts = dough.getComposition().concat(sprinkle.getComposition()).concat(dough.getComposition());
+        return totalProducts;
+    }
+
+    public double getTotalCal() {
+        totalCal = dough.getCalories() + filling.getCalories() + sprinkle.getCalories();
+        return totalCal;
+    }
+
+    public boolean isTotalGlFree() {
+        return totalGlFree;
+    }
+
+    public void setCakeTypes(CakeTypes cakeTypes) {
+        this.cakeTypes = cakeTypes;
+    }
 
     public Recipe(Dough dough, Filling filling, Sprinkle sprinkle, CakeTypes cakeTypes) {
         this.dough = dough;

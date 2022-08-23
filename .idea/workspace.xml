@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c036bb46-b982-4728-8793-6a4ed7da8cde" name="Changes" comment="*">
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Builders/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/Cake.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/CakeTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/Recipe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Components/Dough.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Components/Filling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Components/Sprinkle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Directors/DirectorForAFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Builders/RaisinPieBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Patterns/Builder/Builders/RecipeBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Patterns/Builder/Builders/Builder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patterns/Builder/Builders/Builder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/Cake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/Cake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/CakeTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/CakeTypes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patterns/Builder/Cakes/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Patterns/Builder/Directors/DirectorForAFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patterns/Builder/Directors/DirectorFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Patterns/Builder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Patterns/Builder/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,14 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Patterns/Builder/Cakes/Cake.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Patterns/Builder/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Patterns/Builder/Cakes/Recipe.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Patterns/Builder/Components/Sprinkle.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Patterns/Builder/Components/Dough.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Patterns/Builder/Components/Filling.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -145,7 +153,7 @@
       <recent name="lb3" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PriceChangeSearch">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lb6.Main" />
       <module name="untitled104" />
@@ -165,6 +173,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="lb7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Patterns.Builder.Main" />
+      <module name="untitled104" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Patterns.Builder.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -246,21 +267,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MethodsForLinesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="untitled104" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lb4.Comp.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="lb4" />
-      <option name="MAIN_CLASS_NAME" value="lb4.MethodsForLinesTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main_lb3" />
       <item itemvalue="Application.Main_lb4" />
@@ -271,15 +277,15 @@
       <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.PriceСhangeSearch" />
       <item itemvalue="Application.PriceChangeSearch" />
-      <item itemvalue="JUnit.MethodsForLinesTest" />
+      <item itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.PriceChangeSearch" />
         <item itemvalue="Application.PriceСhangeSearch" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
-        <item itemvalue="JUnit.MethodsForLinesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -329,7 +335,8 @@
       <workItem from="1658064826636" duration="5089000" />
       <workItem from="1658251261325" duration="1496000" />
       <workItem from="1659193979037" duration="591000" />
-      <workItem from="1660562107048" duration="3016000" />
+      <workItem from="1660562107048" duration="4181000" />
+      <workItem from="1661259892513" duration="4552000" />
     </task>
     <task id="LOCAL-00001" summary="Что-то для начала">
       <created>1645175514382</created>
@@ -471,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658258718284</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="*">
+      <created>1660580425640</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1660580425640</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
